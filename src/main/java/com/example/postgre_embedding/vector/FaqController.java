@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class FaqController {
 
     private final ChatClient chatClient;
-    private PgVectorStore pgVectorStore = null;
+    private final PgVectorStore pgVectorStore;
 
     @Value("classpath:/prompts/prompt-template.st")
     private Resource ragPromptTemplate;

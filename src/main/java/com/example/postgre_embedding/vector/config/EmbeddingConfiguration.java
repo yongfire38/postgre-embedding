@@ -12,6 +12,7 @@ import org.springframework.ai.transformer.splitter.TextSplitter;
 import org.springframework.ai.transformer.splitter.TokenTextSplitter;
 import org.springframework.ai.transformers.TransformersEmbeddingModel;
 import org.springframework.ai.vectorstore.PgVectorStore;
+import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
@@ -30,8 +31,8 @@ public class EmbeddingConfiguration {
     private Resource resource;
 
     @Bean
-    PgVectorStore pgVectorStore(JdbcTemplate jdbcTemplate) throws Exception {
-        TransformersEmbeddingModel embeddingModel = new TransformersEmbeddingModel();
+    VectorStore pgVectorStore(JdbcTemplate jdbcTemplate, TransformersEmbeddingModel embeddingModel) throws Exception {
+
         embeddingModel.setTokenizerResource("classpath:/spring-ai-onnx-model/KR-SBERT-V40K-klueNLI-augSTS/tokenizer.json");
         embeddingModel.setModelResource("classpath:/spring-ai-onnx-model/KR-SBERT-V40K-klueNLI-augSTS/model.onnx");
         embeddingModel.setTokenizerOptions(Map.of("padding", "true"));
@@ -44,7 +45,7 @@ public class EmbeddingConfiguration {
     }
 
     @Bean
-    ApplicationRunner runner(PgVectorStore pgVectorStore) {
+    ApplicationRunner runner(VectorStore pgVectorStore) {
         return args -> {
             log.info("Loading file(s) as Documents");
             var textReader = new TextReader(resource);
