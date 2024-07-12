@@ -16,27 +16,27 @@ body:
       value: |
         ## 참가자 (단체인 경우 대표자 1인)
         -
-   성명 (Name): **연락처(Contact)**
-   : ""
-   생년월일 (Date of birth): **E-mail 주소(E-mail address)**
-   : ""
--
-   성명 (Name): ""
-   : ""
-   생년월일 (Date of birth): ""
-   : ""
--
-   성명 (Name): 단체명 (Organization Name)
-   : 해당시 작성 (Fill if applicable)
-   생년월일 (Date of birth): ""
-   : ""
--
-   성명 (Name): ---
-   : ---
-   생년월일 (Date of birth): ""
-   : ""
--
-   성명 (Name): **팀원성명 (Team Member Names)**
-   : **해당 시 작성, 대표자 제외 (Excluding representative)**
-   생년월일 (Date of birth): ""
-   : ""
+        성명 (Name): **연락처(Contact)**
+        : ""
+        생년월일 (Date of birth): **E-mail 주소(E-mail address)**
+        : ""
+        -
+        성명 (Name): ""
+        : ""
+        생년월일 (Date of birth): ""
+        : ""
+        -
+        성명 (Name): 단체명 (Organization Name)
+        : 해당시 작성 (Fill if applicable)
+        생년월일 (Date of birth): ""
+        : ""
+        -
+        성명 (Name): ---
+        : ---
+        생년월일 (Date of birth): ""
+        : ""
+        -
+        성명 (Name): **팀원성명 (Team Member Names)**
+        : **해당 시 작성, 대표자 제외 (Excluding representative)**
+        생년월일 (Date of birth): ""
+        : ""
