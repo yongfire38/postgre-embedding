@@ -24,9 +24,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 public class EmbeddingConfiguration {
     private static final Logger log = LoggerFactory.getLogger(EmbeddingConfiguration.class);
 
-    @Value("vectorstore.json")
-    private String vectorStoreName;
-
     @Value("classpath:/docs/bread.txt")
     private Resource resource;
 
