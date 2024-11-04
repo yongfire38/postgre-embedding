@@ -54,7 +54,7 @@ spring.web.resources.add-mappings=true
 - 모델은 해당 모델을 사용 : snunlp/KR-SBERT-V40K-klueNLI-augSTS
 - [해당 가이드를 참조](https://docs.spring.io/spring-ai/reference/1.0/api/embeddings/onnx.html)
 - 윈도우에서는 다음과 같이 진행
-- 만들어진 파일은 `resources\spring-ai-onnx-model\KR-SBERT-V40K-klueNLI-augSTS` 경로에 넣음
+- 만들어진 파일은 `resources\spring-ai-onnx-model` 경로에 넣음
 
 ```
 python -m venv venv
